@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -367,40 +368,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        visualViewport.onresize = () => {
-            let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-
-            if (vw >= 1024){
-                document.getElementById("nav").style.display = "flex";
-                document.getElementById("nav-toggle").checked = false;
-            }
-            else {
-                document.getElementById("nav").style.display = "block";
-                if (document.getElementById("nav-toggle").checked === false){
-                    document.getElementById("nav").style.display = "none";
-                }
-            }
-        };
-
-        function toggleNav() {
-            let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-
-            if (vw < 1024){
-                document.getElementById("nav").style.display = "block";
-                if (document.getElementById("nav-toggle").checked === true){
-                    document.getElementById("nav").style.display = "none";
-                }
-            }
-        }
-        function closeNav() {
-            let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-
-            if (vw < 1024){
-                document.getElementById("nav").style.display = "none";
-                document.getElementById("nav-toggle").checked = false;
-            }
-        }
-    </script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+![Screenshot](https://github.com/aivarovsky/interno-landing-page/blob/main/img/screenshot.png)
+
 # Interno Landing Page
 
 ## Overview

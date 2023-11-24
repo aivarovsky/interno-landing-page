@@ -234,24 +234,23 @@ nav {
     top: calc(100% + 1px);
     left: 0;
     width: 100%;
-    height: 100svh;
+    height: auto;
     padding-inline: var(--px-content);
     background-color: var(--clr-background);
+    border-bottom: 1px solid var(--clr-accent-50);
 }
 
 nav a {
     display: block;
     padding-block: var(--s);
-    border-bottom: 1px solid var(--clr-accent-50);
 }
+nav a:not(:last-child) {border-bottom: 1px solid var(--clr-accent-50);}
 nav a:hover {color: var(--clr-accent-400);}
 
 .nav-toggle {display: none;}
 .nav-toggle ~ label {cursor: pointer; transition: var(--transition-time);}
 .nav-toggle ~ label:hover {background-color: var(--clr-accent-50);}
-.nav-toggle:checked ~ nav {display: block;}
 .nav-toggle:checked ~ label svg {color: var(--clr-accent-400);}
-body:has(.nav-toggle:checked) {overflow: hidden;}
 
 /* Hero */
 
@@ -502,8 +501,10 @@ footer .link {color: var(--clr-background);}
         height: auto;
         width: auto;
         padding-inline: 0;
+        border: none;
     }
     nav a {padding-block: 0; border-bottom: 0;}
+    nav a:not(:last-child) {border-bottom: 0;}
     .nav-toggle ~ label {display: none;}
     .nav-toggle:checked ~ nav {display: none; display: flex;}
 
